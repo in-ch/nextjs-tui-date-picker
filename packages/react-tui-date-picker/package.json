@@ -1,0 +1,47 @@
+{
+  "name": "react-tui-date-picker",
+  "version": "5.7.3",
+  "description": "react date picker built with and for ReactJS",
+  "main": "dist/react-tui-date-picker.cjs.js",
+  "module": "dist/react-tui-date-picker.esm.js",
+  "types": "dist/react-tui-date-picker.cjs.d.ts",
+  "sideEffects": false,
+  "author": "in-ch",
+  "license": "MIT",
+  "repository": "https://github.com/in-ch/react-tui-date-picker.git/tree/master/packages/react-tui-date-picker",
+  "dependencies": {
+    "@babel/runtime": "^7.12.0",
+    "@emotion/cache": "^11.4.0",
+    "@emotion/react": "^11.8.1",
+    "@emotion/styled": "^11.8.1"
+  },
+  "devDependencies": {
+    "@types/jest-in-case": "^1.0.6",
+    "jest-in-case": "^1.0.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "tui-date-picker": "^4.3.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "tui-date-picker": "^4.3.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "preconstruct": {
+    "entrypoints": [
+      "index.ts"
+    ]
+  },
+  "exports": {
+    ".": {
+      "module": "./dist/react-tui-date-picker.esm.js",
+      "import": "./dist/react-tui-date-picker.cjs.mjs",
+      "default": "./dist/react-tui-date-picker.cjs.js"
+    },
+    "./package.json": "./package.json"
+  }
+}
