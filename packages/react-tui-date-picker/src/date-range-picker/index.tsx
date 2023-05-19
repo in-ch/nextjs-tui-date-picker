@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import DatePicker, { DateRangePickerOptions } from 'tui-date-picker';
-import * as DateRangePickerCss from './date-range-picker.css';
+import * as DateRangePickerCss from '../style/date-picker.css';
 
 export type DateRangePickerOption = Partial<DateRangePickerOptions>;
 export interface DateRangePickerProps {
@@ -12,7 +12,7 @@ export interface DateRangePickerProps {
   endpickerDate?: Date;
 }
 
-const TuiDateRangePickerApp: React.FC<DateRangePickerProps> = ({
+const TuiDateRangePicker: React.FC<DateRangePickerProps> = ({
   options,
   handleChange,
   startpickerDate = new Date(),
@@ -76,4 +76,4 @@ const TuiDateRangePickerApp: React.FC<DateRangePickerProps> = ({
   );
 };
 
-export default TuiDateRangePickerApp;
+export default TuiDateRangePicker;
