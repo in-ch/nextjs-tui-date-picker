@@ -1,6 +1,6 @@
 {
   "name": "react-tui-date-picker",
-  "version": "5.7.3",
+  "version": "1.0.1",
   "description": "react date picker built with and for ReactJS",
   "main": "dist/react-tui-date-picker.cjs.js",
   "module": "dist/react-tui-date-picker.esm.js",
