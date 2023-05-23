@@ -2,12 +2,20 @@ import React, { MutableRefObject, useEffect, useRef } from 'react';
 import DatePicker from 'tui-date-picker';
 import * as DateRangePickerCss from '../style/date-picker.css';
 
-const TuiDatePicker = () => {
+export interface TuiDatePickerProps {
+  handleChange: (e: any) => void;
+  date?: Date;
+}
+
+const TuiDatePicker = ({
+  handleChange,
+  date = new Date(),
+}: TuiDatePickerProps) => {
   const datePickerRef = useRef<DatePicker | null | HTMLDivElement>(null);
 
   useEffect(() => {
     const datePicker = new DatePicker('#wrapper', {
-      date: new Date(),
+      date,
       input: {
         element: '#datepicker-input',
         format: 'yyyy-MM-dd',
@@ -16,19 +24,10 @@ const TuiDatePicker = () => {
 
     datePickerRef.current = datePicker;
 
-    datePicker.on('change', () => {
-      alert('asd');
-      console.log(datePicker.getDate);
-    });
-
     return () => {
       datePicker.destroy();
     };
   }, []);
-
-  const handleChange = () => {
-    alert('handleChange!!!');
-  };
 
   return (
     <DateRangePickerCss.Container>
@@ -38,7 +37,7 @@ const TuiDatePicker = () => {
           id="datepicker-input"
           className="datepicker-input"
           aria-label="Date-Time"
-          onChange={handleChange}
+          onChange={() => handleChange}
         />
         <span className="tui-ico-date" />
       </div>

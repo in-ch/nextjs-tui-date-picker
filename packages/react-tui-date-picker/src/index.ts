@@ -1,5 +1,5 @@
-export { default as TuiDateRangePicker } from './date-range-picker';
-export type {
+export {
+  default as TuiDateRangePicker,
   DateRangePickerOption,
   DateRangePickerProps,
 } from './date-range-picker';
