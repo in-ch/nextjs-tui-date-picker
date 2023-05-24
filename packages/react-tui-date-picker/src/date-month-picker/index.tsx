@@ -1,14 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { MutableRefObject, useEffect, useRef } from 'react';
 import DatePicker from 'tui-date-picker';
+import { TuiDatePickerProps } from '../date-picker';
 import * as DateRangePickerCss from '../style/date-picker.css';
 
-export interface TuiDatePickerProps {
-  handleChange: (e: any) => void;
-  date?: Date;
-}
-
-const TuiDatePicker = ({
+const TuiDateMonthPicker = ({
   handleChange,
   date = new Date(),
 }: TuiDatePickerProps) => {
@@ -17,9 +13,11 @@ const TuiDatePicker = ({
   useEffect(() => {
     const datePicker = new DatePicker('#wrapper', {
       date,
+      language: 'en',
+      type: 'month',
       input: {
-        element: '#datepicker-input',
-        format: 'yyyy-MM-dd',
+        element: '#datepicker-input-month',
+        format: 'yyyy-MM',
       },
     });
 
@@ -35,7 +33,7 @@ const TuiDatePicker = ({
       <div className="tui-datepicker-input tui-datetime-input tui-has-focus">
         <input
           type="text"
-          id="datepicker-input"
+          id="datepicker-input-month"
           className="datepicker-input"
           aria-label="Date-Time"
           onChange={() => handleChange}
@@ -44,11 +42,11 @@ const TuiDatePicker = ({
       </div>
       <div
         id="wrapper"
-        style={{ marginTop: '-1px' }}
+        style={{ marginTop: '-1px', backgroundColor: 'red' }}
         ref={datePickerRef as MutableRefObject<HTMLDivElement>}
       />
     </DateRangePickerCss.Container>
   );
 };
 
-export default TuiDatePicker;
+export default TuiDateMonthPicker;

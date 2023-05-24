@@ -1,14 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { MutableRefObject, useEffect, useRef } from 'react';
 import DatePicker from 'tui-date-picker';
+import { TuiDatePickerProps } from '../date-picker';
 import * as DateRangePickerCss from '../style/date-picker.css';
 
-export interface TuiDatePickerProps {
-  handleChange: (e: any) => void;
-  date?: Date;
-}
-
-const TuiDatePicker = ({
+const TuiYearPicker = ({
   handleChange,
   date = new Date(),
 }: TuiDatePickerProps) => {
@@ -17,8 +13,10 @@ const TuiDatePicker = ({
   useEffect(() => {
     const datePicker = new DatePicker('#wrapper', {
       date,
+      language: 'en',
+      type: 'year',
       input: {
-        element: '#datepicker-input',
+        element: '#datepicker-input-year',
         format: 'yyyy-MM-dd',
       },
     });
@@ -35,7 +33,7 @@ const TuiDatePicker = ({
       <div className="tui-datepicker-input tui-datetime-input tui-has-focus">
         <input
           type="text"
-          id="datepicker-input"
+          id="datepicker-input-year"
           className="datepicker-input"
           aria-label="Date-Time"
           onChange={() => handleChange}
@@ -51,4 +49,4 @@ const TuiDatePicker = ({
   );
 };
 
-export default TuiDatePicker;
+export default TuiYearPicker;

@@ -1,14 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { MutableRefObject, useEffect, useRef } from 'react';
 import DatePicker from 'tui-date-picker';
+import { TuiDatePickerProps } from '../date-picker';
 import * as DateRangePickerCss from '../style/date-picker.css';
 
-export interface TuiDatePickerProps {
-  handleChange: (e: any) => void;
-  date?: Date;
-}
-
-const TuiDatePicker = ({
+const TuiTimeTabPicker = ({
   handleChange,
   date = new Date(),
 }: TuiDatePickerProps) => {
@@ -18,8 +14,12 @@ const TuiDatePicker = ({
     const datePicker = new DatePicker('#wrapper', {
       date,
       input: {
-        element: '#datepicker-input',
+        element: '#datepicker-input-time-tab',
         format: 'yyyy-MM-dd',
+      },
+      timePicker: {
+        layoutType: 'tab',
+        inputType: 'spinbox',
       },
     });
 
@@ -35,7 +35,7 @@ const TuiDatePicker = ({
       <div className="tui-datepicker-input tui-datetime-input tui-has-focus">
         <input
           type="text"
-          id="datepicker-input"
+          id="datepicker-input-time-tab"
           className="datepicker-input"
           aria-label="Date-Time"
           onChange={() => handleChange}
@@ -51,4 +51,4 @@ const TuiDatePicker = ({
   );
 };
 
-export default TuiDatePicker;
+export default TuiTimeTabPicker;
