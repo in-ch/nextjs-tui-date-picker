@@ -775,7 +775,7 @@ const Container = styled.div`
     margin-top: 11px;
   }
 
-  .tui-timepicker-check:first-child {
+  .tui-timepicker-check:first-of-type {
     margin-top: 0;
   }
 
