@@ -1,6 +1,6 @@
 'use client';
 
-import { TuiDateInlinePicker } from 'react-tui-date-picker';
+import { TuiDateInlinePicker } from 'nextjs-tui-date-picker';
 
 export default function Page() {
   return (

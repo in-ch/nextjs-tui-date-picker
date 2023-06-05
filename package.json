@@ -1,13 +1,13 @@
 {
-  "name": "@react-tui-date-picker/monorepo",
+  "name": "@nextjs-tui-date-picker/monorepo",
   "private": true,
   "version": "1.0.1",
-  "description": "A tui date picker control built with and for ReactJS",
+  "description": "A tui date picker control built with and for Next.js",
   "author": "in-ch",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/in-ch/react-tui-date-picker.git"
+    "url": "https://github.com/in-ch/nextjs-tui-date-picker.git"
   },
   "dependencies": {
     "@babel/core": "^7.19.6",
@@ -104,7 +104,8 @@
     ],
     "snapshotSerializers": [
       "@emotion/jest/serializer"
-    ]
+    ],
+    "testEnvironment": "jsdom"
   },
   "workspaces": [
     "packages/*",

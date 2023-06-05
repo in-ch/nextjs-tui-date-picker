@@ -1,14 +1,14 @@
 {
-  "name": "react-tui-date-picker",
+  "name": "nextjs-tui-date-picker",
   "version": "1.0.1",
-  "description": "react date picker built with and for ReactJS",
-  "main": "dist/react-tui-date-picker.cjs.js",
-  "module": "dist/react-tui-date-picker.esm.js",
-  "types": "dist/react-tui-date-picker.cjs.d.ts",
+  "description": "nextjs date picker built with and for NextJs",
+  "main": "dist/nextjs-tui-date-picker.cjs.js",
+  "module": "dist/nextjs-tui-date-picker.esm.js",
+  "types": "dist/nextjs-tui-date-picker.cjs.d.ts",
   "sideEffects": false,
   "author": "in-ch",
   "license": "MIT",
-  "repository": "https://github.com/in-ch/react-tui-date-picker.git/tree/master/packages/react-tui-date-picker",
+  "repository": "https://github.com/in-ch/nextjs-tui-date-picker.git/tree/master/packages/nextjs-tui-date-picker",
   "dependencies": {
     "@babel/runtime": "^7.12.0",
     "@emotion/cache": "^11.4.0",
@@ -38,9 +38,9 @@
   },
   "exports": {
     ".": {
-      "module": "./dist/react-tui-date-picker.esm.js",
-      "import": "./dist/react-tui-date-picker.cjs.mjs",
-      "default": "./dist/react-tui-date-picker.cjs.js"
+      "module": "./dist/nextjs-tui-date-picker.esm.js",
+      "import": "./dist/nextjs-tui-date-picker.cjs.mjs",
+      "default": "./dist/nextjs-tui-date-picker.cjs.js"
     },
     "./package.json": "./package.json"
   }

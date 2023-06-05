@@ -1,6 +1,6 @@
 'use client';
 
-import { TuiYearPicker } from 'react-tui-date-picker';
+import { TuiYearPicker } from 'nextjs-tui-date-picker';
 
 export default function Page() {
   return (

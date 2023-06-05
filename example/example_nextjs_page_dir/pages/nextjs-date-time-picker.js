@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 
 const DynamicTuiDatePicker = dynamic(
   () =>
-    import('react-tui-date-picker').then((module) => module.TuiTimePicker),
+    import('./nextjs-tui-date-picker').then((module) => module.TuiTimePicker),
   {
     ssr: false,
   }

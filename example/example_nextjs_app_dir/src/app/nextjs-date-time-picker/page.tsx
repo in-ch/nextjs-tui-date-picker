@@ -1,6 +1,6 @@
 'use client';
 
-import { TuiTimePicker } from 'react-tui-date-picker';
+import { TuiTimePicker } from 'nextjs-tui-date-picker';
 
 export default function Page() {
   return (
