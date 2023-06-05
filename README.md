@@ -1,134 +1,140 @@
-[![NPM](https://img.shields.io/npm/v/react-select.svg)](https://www.npmjs.com/package/react-select)
-[![CircleCI](https://circleci.com/gh/JedWatson/react-select/tree/master.svg?style=shield)](https://circleci.com/gh/JedWatson/react-select/tree/master)
-[![Coverage Status](https://coveralls.io/repos/JedWatson/react-select/badge.svg?branch=master&service=github)](https://coveralls.io/github/JedWatson/react-select?branch=master)
-[![Supported by Thinkmill](https://thinkmill.github.io/badge/heart.svg)](http://thinkmill.com.au/?utm_source=github&utm_medium=badge&utm_campaign=react-select)
+# nextjs-tui-date-picker
 
-# React-Select
+`nextjs-tui-date-picker` allows you to pick a date using a pop-up calendar in `Next.js`.
 
-The Select control for [React](https://reactjs.org). Initially built for use in [KeystoneJS](https://www.keystonejs.com).
+## Document
 
-See [react-select.com](https://www.react-select.com) for live demos and comprehensive docs.
+- [Installation](#installation)
+- [How to use](#how-to-use)
+- [Demos](#demos )
+- [Properties](#properties)
+- [Example code](#example-code)
+- [Contribute](#contribute)
 
-`react-select` is funded by [Thinkmill](https://www.thinkmill.com.au) and [Atlassian](https://atlaskit.atlassian.com).
-We are an open source project that is continously supported by the community.
+## Installation
 
-React Select helps you develop powerful select components that _just work_ out of the box, without stopping you from customising the parts that are important to you.
+This library use `nextjs-tui-date-picker`, so you need to install it.
 
-For the story behind this component, watch Jed's talk at React Conf 2019 - [building React Select](https://youtu.be/yS0jUnmBujE)
-
-Features include:
-
-- Flexible approach to data, with customisable functions
-- Extensible styling API with [emotion](https://emotion.sh)
-- Component Injection API for complete control over the UI behaviour
-- Controllable state props and modular architecture
-- Long-requested features like option groups, portal support, animation, and more
-
-## Using an older version?
-
-- [v3, v4, and v5 upgrade guide](https://react-select.com/upgrade)
-- [v2 upgrade guide](https://react-select.com/upgrade-to-v2)
-- React Select v1 documentation and examples are available at [v1.react-select.com](https://v1.react-select.com)
-
-# Installation and usage
-
-The easiest way to use react-select is to install it from npm and build it into your app with Webpack.
-
-```
-yarn add react-select
+```bash
+npm install --save nextjs-tui-date-picker
 ```
 
-Then use it in your app:
+or 
 
-```js
-import React, { useState } from 'react';
-import Select from 'react-select';
-
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' },
-];
-
-export default function App() {
-  const [selectedOption, setSelectedOption] = useState(null);
-
-  return (
-    <div className="App">
-      <Select
-        defaultValue={selectedOption}
-        onChange={setSelectedOption}
-        options={options}
-      />
-    </div>
-  );
-}
+```bash
+yarn add nextjs-tui-date-picker
 ```
 
-## Props
 
-Common props you may want to specify include:
+## How to use
+<br/>
 
-- `autoFocus` - focus the control when it mounts
-- `className` - apply a className to the control
-- `classNamePrefix` - apply classNames to inner elements with the given prefix
-- `isDisabled` - disable the control
-- `isMulti` - allow the user to select multiple values
-- `isSearchable` - allow the user to search for matching options
-- `name` - generate an HTML input with this name, containing the current value
-- `onChange` - subscribe to change events
-- `options` - specify the options the user can select from
-- `placeholder` - change the text displayed when no option is selected
-- `noOptionsMessage` - ({ inputValue: string }) => string | null - Text to display when there are no options
-- `value` - control the current value
+> Next.js <= 12 
+```tsx
+import dynamic from 'next/dynamic';
 
-See the [props documentation](https://www.react-select.com/props) for complete documentation on the props react-select supports.
+const DynamicTuiDatePicker = dynamic(
+  () =>
+    import('nextjs-tui-date-picker').then((module) => module.TuiDateInlinePicker),
+  {
+    ssr: false,
+  }
+);
+```
 
-## Controllable Props
+<br />
 
-You can control the following props by providing values for them. If you don't, react-select will manage them for you.
+> in 'App Dir'
+```tsx
+'use client';
 
-- `value` / `onChange` - specify the current value of the control
-- `menuIsOpen` / `onMenuOpen` / `onMenuClose` - control whether the menu is open
-- `inputValue` / `onInputChange` - control the value of the search input (changing this will update the available options)
+import { TuiDatePicker } from 'nextjs-tui-date-picker';
 
-If you don't provide these props, you can set the initial value of the state they control:
+ <TuiDatePicker handleChange={() => console.log('Hello world!')} />
+```
 
-- `defaultValue` - set the initial value of the control
-- `defaultMenuIsOpen` - set the initial open value of the menu
-- `defaultInputValue` - set the initial value of the search input
+## Demos
 
-## Methods
+- nextjs-tui-date-picker.
 
-React-select exposes two public methods:
+![nextjs-tui-date-picker](demos/nextjs-tui-date-picker.mov)
 
-- `focus()` - focus the control programmatically
-- `blur()` - blur the control programmatically
+- nextjs-tui-range-picker.
 
-## Customisation
+![nextjs-tui-range-picker](demos/nextjs-tui-range-picker.mov)
 
-Check the docs for more information on:
+- nextjs-date-inline-picker.
 
-- [Customising the styles](https://www.react-select.com/styles)
-- [Using custom components](https://www.react-select.com/components)
-- [Using the built-in animated components](https://www.react-select.com/home#animated-components)
-- [Creating an async select](https://www.react-select.com/async)
-- [Allowing users to create new options](https://www.react-select.com/creatable)
-- [Advanced use-cases](https://www.react-select.com/advanced)
-- [TypeScript guide](https://www.react-select.com/typescript)
+![nextjs-date-inline-picker](demos/nextjs-date-inline-picker.mov)
 
-## TypeScript
+- nextjs-date-year-picker.
 
-The v5 release represents a rewrite from JavaScript to TypeScript. The types for v4 and earlier releases are available at [@types](https://www.npmjs.com/package/@types/react-select). See the [TypeScript guide](https://www.react-select.com/typescript) for how to use the types starting with v5.
+![nextjs-date-year-picker](demos/nextjs-date-year-picker.mov)
 
-# Thanks
+- nextjs-date-month-picker.
 
-Thank you to everyone who has contributed to this project. It's been a wild ride.
+![nextjs-date-month-picker](demos/nextjs-date-month-picker.mov)
 
-If you like React Select, you should [follow me on Twitter](https://twitter.com/jedwatson)!
+- nextjs-date-time-picker.
 
-Shout out to [Joss Mackison](https://github.com/jossmac), [Charles Lee](https://github.com/gwyneplaine), [Ben Conolly](https://github.com/Noviny), [Tom Walker](https://github.com/bladey), [Nathan Bierema](https://github.com/Methuselah96), [Eric Bonow](https://github.com/ebonow), [Emma Hamilton](https://github.com/emmatown), [Dave Brotherstone](https://github.com/bruderstein), [Brian Vaughn](https://github.com/bvaughn), and the [Atlassian Design System](https://atlassian.design) team who along with many other contributors have made this possible ❤️
+![nextjs-date-time-picker](demos/nextjs-date-time-picker.mov)
 
-## License
+- nextjs-date-time-tab-picker.
 
-MIT Licensed. Copyright (c) Jed Watson 2022.
+![nextjs-date-time-tab-picker](demos/nextjs-date-time-tab-picker.mov)
+
+## Properties
+
+Below are `nextjs-tui-date-picker` specific properties.
+
+| Prop                           | required | Type                                                                                                                  | Description                                                                                                                                |
+| ------------------------------ | -------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| date | X        | Date                                                                                                                | Initial date. Set by a Date instance or a number(timestamp). (default: no initial date).                        |
+| language                  | X        | string = 'en'                                                                                                               | DatePicker type. Determine whether to choose a date, month, or year. |
+| timePicker                 | X        | [ object boolean ]                                                                                                               |TimePicker options. Refer to the TimePicker instance's options. To create the TimePicker without customization, set to true.                                                                                          |
+| calendar           | X        | [ object ]                                                                                                                |Calendar options. Refer to the Calendar instance's options.                                                                                               |
+| input         | X        | [ object ]                                                                                                                | - element : HTMLElement <br /> - formant : string = 'yyyy-mm--dd'                                                                             |
+| selectableRanges                       | X        | Array.<Array.<Datenumber>> = 1900/1/1~2999/12/31                                                                                                           | Ranges of selectable date. Set by Date instances or numbers(timestamp).| disabled                       | X        | boolean                                                                                                               | disable opening the modal                                                                                                                  |
+| openers                | X        | Array<HTMLElement> = []                                                                                                            | List of the openers to open the DatePicker (example - icon, button, etc.)                                                                                                                      |
+| showAlways                     | X        | boolean = true                                                                    | Show the DatePicker always                                                                                                  |
+| autoClose           | X        | boolean = true                                                                    | Close the DatePicker after clicking the date.                                                    |
+| usageStatistics                | X        | boolean = true                                                                                                              | Send a hostname to Google Analytics (default: true)                                                                                                         |
+| weekStartDay         | X        | string = 'Sun'                                                                                                            | Start of the week. 'Sun', 'Mon', ..., 'Sat'(default: 'Sun'(start on Sunday))
+
+## Example code
+
+You can see the example code and demo.
+
+Clone the repository
+
+```bash
+git clone https://github.com/in-ch/nextjs-tui-date-picker.git
+```
+
+Install libraries
+
+```bash
+cd example/example_nextjs_app_dir
+```
+
+or
+
+```bash
+cd example/example_nextjs_page_dir
+```
+
+and 
+
+```bash
+npm install
+```
+
+## Contribute
+
+You can follow below to contribute `nextjs-tui-date-picker`
+
+Clone the repository.
+
+```bash
+git clone https://github.com/in-ch/nextjs-tui-date-picker.git
+```
