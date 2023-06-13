@@ -7,6 +7,8 @@ import * as DateRangePickerCss from '../style/date-picker.css';
 const TuiYearPicker = ({
   handleChange,
   date = new Date(),
+  inputWidth = 'auto',
+  containerWidth = 320,
 }: TuiDatePickerProps) => {
   const datePickerRef = useRef<DatePicker | null | HTMLDivElement>(null);
 
@@ -17,7 +19,7 @@ const TuiYearPicker = ({
       type: 'year',
       input: {
         element: '#datepicker-input-year',
-        format: 'yyyy-MM-dd',
+        format: 'yyyy',
       },
     });
 
@@ -29,8 +31,11 @@ const TuiYearPicker = ({
   }, []);
 
   return (
-    <DateRangePickerCss.Container>
-      <div className="tui-datepicker-input tui-datetime-input tui-has-focus">
+    <DateRangePickerCss.Container style={{ width: containerWidth }}>
+      <div
+        className="tui-datepicker-input tui-datetime-input tui-has-focus"
+        style={{ width: inputWidth }}
+      >
         <input
           type="text"
           id="datepicker-input-year"

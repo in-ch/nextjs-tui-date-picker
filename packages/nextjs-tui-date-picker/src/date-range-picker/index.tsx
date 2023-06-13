@@ -10,6 +10,8 @@ export interface DateRangePickerProps {
   handleChange: (e: any) => void;
   startpickerDate?: Date;
   endpickerDate?: Date;
+  inputWidth?: number | 'auto';
+  containerWidth?: number;
 }
 
 const TuiDateRangePicker: React.FC<DateRangePickerProps> = ({
@@ -17,6 +19,8 @@ const TuiDateRangePicker: React.FC<DateRangePickerProps> = ({
   handleChange,
   startpickerDate = new Date(),
   endpickerDate = new Date(),
+  inputWidth = 'auto',
+  containerWidth = 320,
 }: DateRangePickerProps) => {
   useEffect(() => {
     const today = new Date(startpickerDate);
@@ -60,14 +64,24 @@ const TuiDateRangePicker: React.FC<DateRangePickerProps> = ({
   }
 
   return (
-    <DateRangePickerCss.Container>
-      <input type="text" id="startpicker-input" placeholder="Start Date" />
+    <DateRangePickerCss.Container style={{ width: containerWidth }}>
+      <input
+        type="text"
+        id="startpicker-input"
+        placeholder="Start Date"
+        style={{ width: inputWidth }}
+      />
       <div
         id="startpicker-container"
         style={{ zIndex: 9999, backgroundColor: '#fff' }}
       />
       <DateRangePickerCss.Dash>~</DateRangePickerCss.Dash>
-      <input type="text" id="endpicker-input" placeholder="End Date" />
+      <input
+        type="text"
+        id="endpicker-input"
+        placeholder="End Date"
+        style={{ width: inputWidth }}
+      />
       <div
         id="endpicker-container"
         style={{ zIndex: 9999, backgroundColor: '#fff' }}

@@ -7,6 +7,8 @@ import * as DateRangePickerCss from '../style/date-picker.css';
 const TuiTimePicker = ({
   handleChange,
   date = new Date(),
+  inputWidth = 'auto',
+  containerWidth = 320,
 }: TuiDatePickerProps) => {
   const datePickerRef = useRef<DatePicker | null | HTMLDivElement>(null);
 
@@ -15,7 +17,7 @@ const TuiTimePicker = ({
       date,
       input: {
         element: '#datepicker-input-time',
-        format: 'yyyy-MM-dd',
+        format: 'yyyy-MM-dd HH:mm',
       },
       timePicker: true,
     });
@@ -28,8 +30,11 @@ const TuiTimePicker = ({
   }, []);
 
   return (
-    <DateRangePickerCss.Container>
-      <div className="tui-datepicker-input tui-datetime-input tui-has-focus">
+    <DateRangePickerCss.Container style={{ width: containerWidth }}>
+      <div
+        className="tui-datepicker-input tui-datetime-input tui-has-focus"
+        style={{ width: inputWidth }}
+      >
         <input
           type="text"
           id="datepicker-input-time"

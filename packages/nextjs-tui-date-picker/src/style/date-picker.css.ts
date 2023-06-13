@@ -4,13 +4,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 340px;
   padding: 10px;
   border-radius: 5px;
   position: relative;
   & > input {
     background: none;
-    width: 130px;
     text-align: center;
     font-size: 15px;
     color: rgb(100, 100, 100);
@@ -32,7 +30,6 @@ const Container = styled.div`
     position: relative;
     background-color: #fff;
     border: 1px solid #aaa;
-    width: 274px;
   }
 
   .tui-calendar * {
@@ -905,8 +902,8 @@ const Container = styled.div`
   }
 `;
 const Dash = styled.p`
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
 `;
 
 export { Container, Dash };

@@ -5,7 +5,10 @@ import { TuiTimePicker } from 'nextjs-tui-date-picker';
 export default function Page() {
   return (
     <>
-      <TuiTimePicker handleChange={() => console.log('Hello world!')} />
+      <TuiTimePicker
+        handleChange={() => console.log('Hello world!')}
+        inputWidth={140}
+      />
     </>
   );
 }
