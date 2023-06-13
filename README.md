@@ -79,31 +79,31 @@ return (
 
 - nextjs-tui-date-picker.
 
-![nextjs-tui-date-picker](demos/nextjs-tui-date-picker.mov)
+![nextjs-tui-date-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/ee7125ea-452c-4903-802a-36d1372a6c9c)
 
 - nextjs-tui-range-picker.
 
-![nextjs-tui-range-picker](demos/nextjs-tui-range-picker.mov)
+![nextjs-tui-range-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/fa488a25-4695-43f8-8eba-bd4599b42b0a)
 
 - nextjs-date-inline-picker.
 
-![nextjs-date-inline-picker](demos/nextjs-date-inline-picker.mov)
+![nextjs-date-inline-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/65c532b6-3678-4b0f-9053-04c3fb82045e)
 
 - nextjs-date-year-picker.
 
-![nextjs-date-year-picker](demos/nextjs-date-year-picker.mov)
+![nextjs-date-year-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/5010fb07-1627-4126-aff7-6148556acfdf)
 
 - nextjs-date-month-picker.
 
-![nextjs-date-month-picker](demos/nextjs-date-month-picker.mov)
+![nextjs-date-month-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/0cc7ac9b-040c-4b9f-9076-edc072882d3c)
 
 - nextjs-date-time-picker.
 
-![nextjs-date-time-picker](demos/nextjs-date-time-picker.mov)
+![nextjs-date-time-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/ffcdfc01-b718-46d0-851e-0f03ddbbc436)
 
 - nextjs-date-time-tab-picker.
 
-![nextjs-date-time-tab-picker](demos/nextjs-date-time-tab-picker.mov)
+![nextjs-date-time-tab-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/74e9f423-f374-494c-ae39-3377c274694b)
 
 ## Properties
 
