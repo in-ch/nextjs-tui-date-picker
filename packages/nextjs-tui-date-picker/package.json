@@ -1,6 +1,6 @@
 {
   "name": "nextjs-tui-date-picker",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "nextjs date picker built with and for NextJs",
   "main": "dist/nextjs-tui-date-picker.cjs.js",
   "module": "dist/nextjs-tui-date-picker.esm.js",
@@ -13,7 +13,8 @@
     "@babel/runtime": "^7.12.0",
     "@emotion/cache": "^11.4.0",
     "@emotion/react": "^11.8.1",
-    "@emotion/styled": "^11.8.1"
+    "@emotion/styled": "^11.8.1",
+    "next": "^13.4.5"
   },
   "devDependencies": {
     "@types/jest-in-case": "^1.0.6",
@@ -25,12 +26,28 @@
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0",
-    "tui-date-picker": "^4.3.3"
+    "tui-date-picker": "^4.3.3",
+    "next": "*"
   },
   "files": [
     "dist"
   ],
-  "keywords": [],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "next",
+    "reactjs",
+    "nextjs",
+    "date-picker",
+    "date-range-picker",
+    "nextjs-tui-date-picker",
+    "nextjs-tui-date-range-picker",
+    "tui-date-picker",
+    "component",
+    "calendar"
+  ],
   "preconstruct": {
     "entrypoints": [
       "index.ts"

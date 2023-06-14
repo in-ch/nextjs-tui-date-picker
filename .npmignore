@@ -4,3 +4,6 @@ example
 .yarn
 .changeset
 .editorconfig
+coverage
+demos
+__test__

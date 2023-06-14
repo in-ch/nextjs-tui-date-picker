@@ -1,14 +1,26 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { MutableRefObject, useEffect, useRef } from 'react';
 import DatePicker from 'tui-date-picker';
-import { TuiDatePickerProps } from '../date-picker';
 import * as DateRangePickerCss from '../style/date-picker.css';
 
-const TuiTimePicker = ({
+export interface TuiDatePickerProps {
+  handleChange: (e: any) => void;
+  date?: Date;
+  inputWidth?: number | 'auto';
+  containerWidth?: number;
+  containerHeight?: number;
+  fontSize?: number;
+  backgroundColor?: string;
+}
+
+const DatePickerComponent = ({
   handleChange,
   date = new Date(),
-  inputWidth = 'auto',
+  inputWidth = 110,
   containerWidth = 320,
+  containerHeight = 42,
+  fontSize = 14,
+  backgroundColor = '#fff',
 }: TuiDatePickerProps) => {
   const datePickerRef = useRef<DatePicker | null | HTMLDivElement>(null);
 
@@ -16,10 +28,9 @@ const TuiTimePicker = ({
     const datePicker = new DatePicker('#wrapper', {
       date,
       input: {
-        element: '#datepicker-input-time',
-        format: 'yyyy-MM-dd HH:mm',
+        element: '#datepicker-input',
+        format: 'yyyy-MM-dd',
       },
-      timePicker: true,
     });
 
     datePickerRef.current = datePicker;
@@ -30,17 +41,20 @@ const TuiTimePicker = ({
   }, []);
 
   return (
-    <DateRangePickerCss.Container style={{ width: containerWidth }}>
+    <DateRangePickerCss.Container
+      style={{ width: containerWidth, height: containerHeight }}
+    >
       <div
         className="tui-datepicker-input tui-datetime-input tui-has-focus"
-        style={{ width: inputWidth }}
+        style={{ width: inputWidth, backgroundColor }}
       >
         <input
           type="text"
-          id="datepicker-input-time"
+          id="datepicker-input"
           className="datepicker-input"
           aria-label="Date-Time"
           onChange={() => handleChange}
+          style={{ width: inputWidth, fontSize }}
         />
         <span className="tui-ico-date" />
       </div>
@@ -53,4 +67,4 @@ const TuiTimePicker = ({
   );
 };
 
-export default TuiTimePicker;
+export default DatePickerComponent;

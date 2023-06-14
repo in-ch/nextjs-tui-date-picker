@@ -12,7 +12,7 @@ const Container = styled.div`
     text-align: center;
     font-size: 15px;
     color: rgb(100, 100, 100);
-    border: 0;
+    border: 
     outline: 0;
     &:-webkit-autofill,
     &:-webkit-autofill:hover,

@@ -1,93 +1,13 @@
-'use client';
+import React from 'react';
+import dynamic from 'next/dynamic';
+import { TuiDateRangePickerProps } from './date-range-picker';
 
-import React, { useEffect } from 'react';
-import DatePicker, { DateRangePickerOptions } from 'tui-date-picker';
-import * as DateRangePickerCss from '../style/date-picker.css';
+const NoSsrDateRangePicker = dynamic(() => import('./date-range-picker'), {
+  ssr: false,
+});
 
-export type DateRangePickerOption = Partial<DateRangePickerOptions>;
-export interface DateRangePickerProps {
-  options?: DateRangePickerOption;
-  handleChange: (e: any) => void;
-  startpickerDate?: Date;
-  endpickerDate?: Date;
-  inputWidth?: number | 'auto';
-  containerWidth?: number;
-}
-
-const TuiDateRangePicker: React.FC<DateRangePickerProps> = ({
-  options,
-  handleChange,
-  startpickerDate = new Date(),
-  endpickerDate = new Date(),
-  inputWidth = 'auto',
-  containerWidth = 320,
-}: DateRangePickerProps) => {
-  useEffect(() => {
-    const today = new Date(startpickerDate);
-    const defaultOptions: DateRangePickerOptions = {
-      startpicker: {
-        date: startpickerDate,
-        input: '#startpicker-input',
-        container: '#startpicker-container',
-      },
-      endpicker: {
-        date: endpickerDate,
-        input: '#endpicker-input',
-        container: '#endpicker-container',
-      },
-      language: 'ko',
-      usageStatistics: false,
-      selectableRanges: [
-        [
-          today,
-          new Date(today.getFullYear() + 1, today.getMonth(), today.getDate()),
-        ],
-      ],
-      format: 'YYYY-MM-dd HH:mm',
-    };
-    const mergedOptions = { ...defaultOptions, ...options };
-    const picker = DatePicker.createRangePicker(mergedOptions);
-
-    picker.on('change:end', () => {
-      const startDate = new Date(startpickerDate);
-      const endDate = new Date(endpickerDate);
-      handleChange([startDate, endDate]);
-    });
-
-    return () => {
-      picker.destroy();
-    };
-  }, [endpickerDate, handleChange, options, startpickerDate]);
-
-  if (typeof window === 'undefined') {
-    return null;
-  }
-
-  return (
-    <DateRangePickerCss.Container style={{ width: containerWidth }}>
-      <input
-        type="text"
-        id="startpicker-input"
-        placeholder="Start Date"
-        style={{ width: inputWidth }}
-      />
-      <div
-        id="startpicker-container"
-        style={{ zIndex: 9999, backgroundColor: '#fff' }}
-      />
-      <DateRangePickerCss.Dash>~</DateRangePickerCss.Dash>
-      <input
-        type="text"
-        id="endpicker-input"
-        placeholder="End Date"
-        style={{ width: inputWidth }}
-      />
-      <div
-        id="endpicker-container"
-        style={{ zIndex: 9999, backgroundColor: '#fff' }}
-      />
-    </DateRangePickerCss.Container>
-  );
+const TuiDateRangePicker = (props: TuiDateRangePickerProps) => {
+  return <NoSsrDateRangePicker {...props} />;
 };
 
 export default TuiDateRangePicker;
