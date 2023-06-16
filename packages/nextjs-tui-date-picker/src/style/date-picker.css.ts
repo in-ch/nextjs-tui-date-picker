@@ -30,6 +30,7 @@ const Container = styled.div`
     position: relative;
     background-color: #fff;
     border: 1px solid #aaa;
+    z-index: 10;
   }
 
   .tui-calendar * {
@@ -99,7 +100,9 @@ const Container = styled.div`
   .tui-calendar-year {
     width: 202px;
   }
-
+  .tui-calendar {
+    z-index: 10;
+  }
   .tui-calendar-month .tui-calendar-body,
   .tui-calendar-year .tui-calendar-body {
     width: 202px;
@@ -326,6 +329,7 @@ const Container = styled.div`
     border: 1px solid #aaa;
     background-color: white;
     position: absolute;
+    z-index: 2;
   }
 
   .tui-datepicker * {
