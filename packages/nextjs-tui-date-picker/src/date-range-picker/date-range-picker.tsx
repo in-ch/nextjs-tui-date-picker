@@ -19,6 +19,7 @@ export interface TuiDateRangePickerProps {
   containerHeight?: number;
   fontSize?: number;
   backgroundColor?: string;
+  format?: string;
 }
 
 const DateRangePickerComponent: React.FC<TuiDateRangePickerProps> = ({
@@ -31,6 +32,7 @@ const DateRangePickerComponent: React.FC<TuiDateRangePickerProps> = ({
   containerHeight = 42,
   fontSize = 14,
   backgroundColor = '#fff',
+  format = 'YYYY-MM-dd',
   selectableRangeStart = new Date(),
   selectableRangeEnd = new Date(
     new Date().getFullYear() + 1,
@@ -53,7 +55,7 @@ const DateRangePickerComponent: React.FC<TuiDateRangePickerProps> = ({
       language: 'ko',
       usageStatistics: false,
       selectableRanges: [[selectableRangeStart, selectableRangeEnd]],
-      format: 'YYYY-MM-dd',
+      format,
     };
     const mergedOptions = { ...defaultOptions, ...options };
     const picker = DatePicker.createRangePicker(mergedOptions);
