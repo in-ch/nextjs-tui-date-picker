@@ -14,6 +14,7 @@
     "@emotion/cache": "^11.4.0",
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
+    "moment": "^2.29.4",
     "next": "^13.4.5"
   },
   "devDependencies": {
@@ -24,10 +25,9 @@
     "tui-date-picker": "^4.3.3"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0",
-    "tui-date-picker": "^4.3.3",
-    "next": "*"
+    "next": "*",
+    "react": "*",
+    "react-dom": "*"
   },
   "files": [
     "dist"
