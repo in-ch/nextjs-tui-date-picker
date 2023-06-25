@@ -8,7 +8,8 @@ export default function Page() {
       <TuiDatePicker
         handleChange={() => console.log('Hello world!')}
         date={new Date('2023-01-01')}
-        inputWidth={100}
+        inputWidth={140}
+        fontSize={16}
       />
     </>
   );
