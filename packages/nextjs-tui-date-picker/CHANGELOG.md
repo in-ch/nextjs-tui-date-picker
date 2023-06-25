@@ -1,7 +1,7 @@
-# react-tui-date-picker
+# nextjs-tui-date-picker
 
-## 1.0.1
+## 1.0.0
 
-### Patch Changes
+### Major Changes
 
-- first init
+- first deploy
