@@ -12,7 +12,7 @@ const Container = styled.div`
     text-align: center;
     font-size: 15px;
     color: rgb(100, 100, 100);
-    border: 
+    border: 0;
     outline: 0;
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
@@ -423,7 +423,7 @@ const Container = styled.div`
     width: 120px;
     height: 28px;
     vertical-align: top;
-    border: 1px solid #ddd;
+    outline: 0;
   }
 
   .tui-datepicker-input * {
@@ -436,7 +436,6 @@ const Container = styled.div`
     width: 100%;
     height: 100%;
     padding: 6px 27px 6px 10px;
-    font-size: 12px;
     line-height: 14px;
     vertical-align: top;
     border: 0;
