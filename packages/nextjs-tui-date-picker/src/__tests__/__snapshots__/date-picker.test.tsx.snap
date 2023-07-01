@@ -996,7 +996,7 @@ exports[`DatePickerComponent renders correctly - snapshot 1`] = `
                 <em
                   class="tui-calendar-title tui-calendar-title-month"
                 >
-                  June 2023
+                  January 2023
                 </em>
                       
                 <button
@@ -1014,7 +1014,7 @@ exports[`DatePickerComponent renders correctly - snapshot 1`] = `
                 <p
                   class="tui-calendar-title-today"
                 >
-                  Today: Monday, June 26, 2023
+                  Today: Saturday, July 1, 2023
                 </p>
                   
               </div>
@@ -1096,217 +1096,162 @@ exports[`DatePickerComponent renders correctly - snapshot 1`] = `
                   >
                                 
                     <td
-                      class="tui-calendar-date tui-calendar-prev-month tui-calendar-sun tui-is-selectable"
-                      data-timestamp="1685199600000"
-                    >
-                      28
-                    </td>
-                                
-                    <td
-                      class="tui-calendar-date tui-calendar-prev-month tui-is-selectable"
-                      data-timestamp="1685286000000"
-                    >
-                      29
-                    </td>
-                                
-                    <td
-                      class="tui-calendar-date tui-calendar-prev-month tui-is-selectable"
-                      data-timestamp="1685372400000"
-                    >
-                      30
-                    </td>
-                                
-                    <td
-                      class="tui-calendar-date tui-calendar-prev-month tui-is-selectable"
-                      data-timestamp="1685458800000"
-                    >
-                      31
-                    </td>
-                                
-                    <td
-                      class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1685545200000"
+                      class="tui-calendar-date tui-calendar-sun tui-is-selectable tui-is-selected"
+                      data-timestamp="1672498800000"
                     >
                       1
                     </td>
                                 
                     <td
                       class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1685631600000"
+                      data-timestamp="1672585200000"
                     >
                       2
                     </td>
                                 
                     <td
-                      class="tui-calendar-date tui-calendar-sat tui-is-selectable"
-                      data-timestamp="1685718000000"
+                      class="tui-calendar-date tui-is-selectable"
+                      data-timestamp="1672671600000"
                     >
                       3
                     </td>
-                              
-                  </tr>
-                          
-                  <tr
-                    class="tui-calendar-week"
-                  >
                                 
                     <td
-                      class="tui-calendar-date tui-calendar-sun tui-is-selectable"
-                      data-timestamp="1685804400000"
+                      class="tui-calendar-date tui-is-selectable"
+                      data-timestamp="1672758000000"
                     >
                       4
                     </td>
                                 
                     <td
                       class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1685890800000"
+                      data-timestamp="1672844400000"
                     >
                       5
                     </td>
                                 
                     <td
                       class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1685977200000"
+                      data-timestamp="1672930800000"
                     >
                       6
                     </td>
                                 
                     <td
-                      class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1686063600000"
+                      class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                      data-timestamp="1673017200000"
                     >
                       7
                     </td>
+                              
+                  </tr>
+                          
+                  <tr
+                    class="tui-calendar-week"
+                  >
                                 
                     <td
-                      class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1686150000000"
+                      class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                      data-timestamp="1673103600000"
                     >
                       8
                     </td>
                                 
                     <td
                       class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1686236400000"
+                      data-timestamp="1673190000000"
                     >
                       9
                     </td>
                                 
                     <td
-                      class="tui-calendar-date tui-calendar-sat tui-is-selectable"
-                      data-timestamp="1686322800000"
+                      class="tui-calendar-date tui-is-selectable"
+                      data-timestamp="1673276400000"
                     >
                       10
                     </td>
-                              
-                  </tr>
-                          
-                  <tr
-                    class="tui-calendar-week"
-                  >
                                 
                     <td
-                      class="tui-calendar-date tui-calendar-sun tui-is-selectable"
-                      data-timestamp="1686409200000"
+                      class="tui-calendar-date tui-is-selectable"
+                      data-timestamp="1673362800000"
                     >
                       11
                     </td>
                                 
                     <td
                       class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1686495600000"
+                      data-timestamp="1673449200000"
                     >
                       12
                     </td>
                                 
                     <td
                       class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1686582000000"
+                      data-timestamp="1673535600000"
                     >
                       13
                     </td>
                                 
                     <td
-                      class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1686668400000"
+                      class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                      data-timestamp="1673622000000"
                     >
                       14
                     </td>
+                              
+                  </tr>
+                          
+                  <tr
+                    class="tui-calendar-week"
+                  >
                                 
                     <td
-                      class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1686754800000"
+                      class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                      data-timestamp="1673708400000"
                     >
                       15
                     </td>
                                 
                     <td
                       class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1686841200000"
+                      data-timestamp="1673794800000"
                     >
                       16
                     </td>
                                 
                     <td
-                      class="tui-calendar-date tui-calendar-sat tui-is-selectable"
-                      data-timestamp="1686927600000"
+                      class="tui-calendar-date tui-is-selectable"
+                      data-timestamp="1673881200000"
                     >
                       17
                     </td>
-                              
-                  </tr>
-                          
-                  <tr
-                    class="tui-calendar-week"
-                  >
                                 
                     <td
-                      class="tui-calendar-date tui-calendar-sun tui-is-selectable"
-                      data-timestamp="1687014000000"
+                      class="tui-calendar-date tui-is-selectable"
+                      data-timestamp="1673967600000"
                     >
                       18
                     </td>
                                 
                     <td
                       class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1687100400000"
+                      data-timestamp="1674054000000"
                     >
                       19
                     </td>
                                 
                     <td
                       class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1687186800000"
+                      data-timestamp="1674140400000"
                     >
                       20
                     </td>
                                 
                     <td
-                      class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1687273200000"
+                      class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                      data-timestamp="1674226800000"
                     >
                       21
-                    </td>
-                                
-                    <td
-                      class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1687359600000"
-                    >
-                      22
-                    </td>
-                                
-                    <td
-                      class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1687446000000"
-                    >
-                      23
-                    </td>
-                                
-                    <td
-                      class="tui-calendar-date tui-calendar-sat tui-is-selectable"
-                      data-timestamp="1687532400000"
-                    >
-                      24
                     </td>
                               
                   </tr>
@@ -1317,51 +1262,106 @@ exports[`DatePickerComponent renders correctly - snapshot 1`] = `
                                 
                     <td
                       class="tui-calendar-date tui-calendar-sun tui-is-selectable"
-                      data-timestamp="1687618800000"
+                      data-timestamp="1674313200000"
+                    >
+                      22
+                    </td>
+                                
+                    <td
+                      class="tui-calendar-date tui-is-selectable"
+                      data-timestamp="1674399600000"
+                    >
+                      23
+                    </td>
+                                
+                    <td
+                      class="tui-calendar-date tui-is-selectable"
+                      data-timestamp="1674486000000"
+                    >
+                      24
+                    </td>
+                                
+                    <td
+                      class="tui-calendar-date tui-is-selectable"
+                      data-timestamp="1674572400000"
                     >
                       25
                     </td>
                                 
                     <td
-                      class="tui-calendar-date tui-calendar-today tui-is-selectable tui-is-selected"
-                      data-timestamp="1687705200000"
+                      class="tui-calendar-date tui-is-selectable"
+                      data-timestamp="1674658800000"
                     >
                       26
                     </td>
                                 
                     <td
                       class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1687791600000"
+                      data-timestamp="1674745200000"
                     >
                       27
                     </td>
                                 
                     <td
-                      class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1687878000000"
+                      class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                      data-timestamp="1674831600000"
                     >
                       28
                     </td>
+                              
+                  </tr>
+                          
+                  <tr
+                    class="tui-calendar-week"
+                  >
                                 
                     <td
-                      class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1687964400000"
+                      class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                      data-timestamp="1674918000000"
                     >
                       29
                     </td>
                                 
                     <td
                       class="tui-calendar-date tui-is-selectable"
-                      data-timestamp="1688050800000"
+                      data-timestamp="1675004400000"
                     >
                       30
                     </td>
                                 
                     <td
-                      class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
-                      data-timestamp="1688137200000"
+                      class="tui-calendar-date tui-is-selectable"
+                      data-timestamp="1675090800000"
+                    >
+                      31
+                    </td>
+                                
+                    <td
+                      class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                      data-timestamp="1675177200000"
                     >
                       1
+                    </td>
+                                
+                    <td
+                      class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                      data-timestamp="1675263600000"
+                    >
+                      2
+                    </td>
+                                
+                    <td
+                      class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                      data-timestamp="1675350000000"
+                    >
+                      3
+                    </td>
+                                
+                    <td
+                      class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
+                      data-timestamp="1675436400000"
+                    >
+                      4
                     </td>
                               
                   </tr>
@@ -1372,51 +1372,51 @@ exports[`DatePickerComponent renders correctly - snapshot 1`] = `
                                 
                     <td
                       class="tui-calendar-date tui-calendar-next-month tui-calendar-sun tui-is-selectable"
-                      data-timestamp="1688223600000"
-                    >
-                      2
-                    </td>
-                                
-                    <td
-                      class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
-                      data-timestamp="1688310000000"
-                    >
-                      3
-                    </td>
-                                
-                    <td
-                      class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
-                      data-timestamp="1688396400000"
-                    >
-                      4
-                    </td>
-                                
-                    <td
-                      class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
-                      data-timestamp="1688482800000"
+                      data-timestamp="1675522800000"
                     >
                       5
                     </td>
                                 
                     <td
                       class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
-                      data-timestamp="1688569200000"
+                      data-timestamp="1675609200000"
                     >
                       6
                     </td>
                                 
                     <td
                       class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
-                      data-timestamp="1688655600000"
+                      data-timestamp="1675695600000"
                     >
                       7
                     </td>
                                 
                     <td
-                      class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
-                      data-timestamp="1688742000000"
+                      class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                      data-timestamp="1675782000000"
                     >
                       8
+                    </td>
+                                
+                    <td
+                      class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                      data-timestamp="1675868400000"
+                    >
+                      9
+                    </td>
+                                
+                    <td
+                      class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                      data-timestamp="1675954800000"
+                    >
+                      10
+                    </td>
+                                
+                    <td
+                      class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
+                      data-timestamp="1676041200000"
+                    >
+                      11
                     </td>
                               
                   </tr>
