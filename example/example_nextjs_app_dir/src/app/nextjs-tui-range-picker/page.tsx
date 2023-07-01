@@ -2,11 +2,10 @@
 
 import {
   TuiDateRangePicker,
-  DateRangePickerOption,
 } from 'nextjs-tui-date-picker';
 
 export default function Page() {
-  const options: DateRangePickerOption = {
+  const options = {
     language: 'en',
     usageStatistics: false,
     format: 'MM-dd YYYY',
