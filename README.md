@@ -29,33 +29,40 @@ yarn add nextjs-tui-date-picker
 
 <br/>
 
-> Next.js <= 12
-
-```tsx
-import dynamic from 'next/dynamic';
-
-const DynamicTuiDatePicker = dynamic(
-  () =>
-    import('nextjs-tui-date-picker').then(
-      (module) => module.TuiDateInlinePicker
-    ),
-  {
-    ssr: false,
-  }
-);
-```
-
-<br />
-
-> in 'App Dir'
+- TuiDatePicker
 
 ```tsx
 'use client';
 
 import { TuiDatePicker } from 'nextjs-tui-date-picker';
 
-<TuiDatePicker handleChange={() => console.log('Hello world!')} />;
+<TuiDatePicker
+    handleChange={handleChange}
+    date={new Date('2023-01-01')}
+    inputWidth={140}
+    fontSize={16}
+/>
 ```
+
+- TuiDateRangePicker
+
+```tsx
+'use client';
+
+import {
+  TuiDateRangePicker,
+} from 'nextjs-tui-date-picker';
+
+<TuiDateRangePicker
+    handleChange={handleChange}
+    options={options}
+    inputWidth={80}
+    containerWidth={200}
+    startpickerDate={new Date('2023-01-02')}
+    endpickerDate={new Date('2023-01-30')}
+/>
+```
+
 
 - If you wanna change format or [language](#properties)
 
@@ -68,7 +75,7 @@ const options: DateRangePickerOption = {
 return (
   <>
     <TuiDateRangePicker
-      handleChange={() => console.log('Hello world!')}
+      handleChange={handleChange}
       options={options}
     />
   </>
@@ -81,29 +88,19 @@ return (
 
 ![nextjs-tui-date-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/ee7125ea-452c-4903-802a-36d1372a6c9c)
 
-- nextjs-tui-range-picker.
-
-![nextjs-tui-range-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/fa488a25-4695-43f8-8eba-bd4599b42b0a)
-
-- nextjs-date-inline-picker.
-
 ![nextjs-date-inline-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/65c532b6-3678-4b0f-9053-04c3fb82045e)
-
-- nextjs-date-year-picker.
 
 ![nextjs-date-year-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/5010fb07-1627-4126-aff7-6148556acfdf)
 
-- nextjs-date-month-picker.
-
 ![nextjs-date-month-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/0cc7ac9b-040c-4b9f-9076-edc072882d3c)
-
-- nextjs-date-time-picker.
 
 ![nextjs-date-time-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/ffcdfc01-b718-46d0-851e-0f03ddbbc436)
 
-- nextjs-date-time-tab-picker.
-
 ![nextjs-date-time-tab-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/74e9f423-f374-494c-ae39-3377c274694b)
+
+- nextjs-tui-range-picker.
+
+![nextjs-tui-range-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/fa488a25-4695-43f8-8eba-bd4599b42b0a)
 
 ## Properties
 
