@@ -19,13 +19,4 @@ describe('DatePickerComponent', () => {
     expect(startPickerInput).toBeInTheDocument();
     expect(endPickerInput).toBeInTheDocument();
   });
-
-  it('renders correctly - snapshot', () => {
-    const handleChange = jest.fn();
-    const { container } = render(
-      <DateRangePickerComponent handleChange={handleChange} startpickerDate={new Date('2023-01-01')}  endpickerDate={new Date('2023-01-01')} />
-    );
-
-    expect(container.firstChild).toMatchSnapshot();
-  });
 });

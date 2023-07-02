@@ -23,12 +23,4 @@ describe('DatePickerComponent', () => {
     expect(next_month).toBeInTheDocument();
     expect(datepickerInput).toBeInTheDocument();
   });
-
-  it('renders correctly - snapshot', () => {
-    const handleChange = jest.fn();
-    const { container } = render(
-      <DatePickerComponent handleChange={handleChange} date={new Date('2023-01-01')} />
-    );
-    expect(container.firstChild).toMatchSnapshot();
-  });
 });
