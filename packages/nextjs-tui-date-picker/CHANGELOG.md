@@ -1,5 +1,11 @@
 # nextjs-tui-date-picker
 
+## 1.1.3
+
+### Patch Changes
+
+- Fix: Bug when using more than one DatePicker component
+
 ## 1.1.1
 
 ### Patch Changes
