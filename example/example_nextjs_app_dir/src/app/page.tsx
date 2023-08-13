@@ -10,6 +10,12 @@ export default function Home() {
       <Link href="/nextjs-tui-range-picker">
         <p>nextjs-tui-range-picker</p>
       </Link>
+      <Link href="/multiple-nextjs-tui-date-picker">
+        <p>multiple-nextjs-tui-date-picker</p>
+      </Link>
+      <Link href="/multiple-nextjs-tui-range-picker">
+        <p>multiple-nextjs-tui-range-picker</p>
+      </Link>
     </>
   );
 }
