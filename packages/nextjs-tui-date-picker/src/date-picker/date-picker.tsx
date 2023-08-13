@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { MutableRefObject, useEffect, useRef } from 'react';
+import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
 import DatePicker from 'tui-date-picker';
 import moment from 'moment';
 
@@ -13,8 +13,6 @@ export interface TuiDatePickerProps {
   containerHeight?: number;
   fontSize?: number;
   backgroundColor?: string;
-  wrapperId?: string;
-  inputId?: string;
   format?: string;
 }
 
@@ -26,11 +24,11 @@ const DatePickerComponent = ({
   containerHeight = 42,
   fontSize = 18,
   backgroundColor = '#fff',
-  wrapperId = 'datepicker-wrapper', // 새로운 id 속성 추가
-  inputId = 'datepicker-input',
   format = 'yyyy-MM-dd',
 }: TuiDatePickerProps) => {
   const datePickerRef = useRef<DatePicker | null | HTMLDivElement>(null);
+  const [wrapperId] = useState(`datepicker-wrapper-${Math.floor(Math.random() * 10000)}`);
+  const [inputId] = useState(`datepicker-input-${Math.floor(Math.random() * 10000)}`);
 
   useEffect(() => {
     const datePicker = new DatePicker(`#${wrapperId}`, {

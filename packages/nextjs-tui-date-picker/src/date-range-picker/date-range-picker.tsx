@@ -1,8 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-underscore-dangle */
-'use client';
-
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import DatePicker, { DateRangePickerOptions } from 'tui-date-picker';
 import * as DateRangePickerCss from '../style/date-picker.css';
 
@@ -40,17 +38,22 @@ const DateRangePickerComponent: React.FC<TuiDateRangePickerProps> = ({
     new Date().getDate()
   ),
 }: TuiDateRangePickerProps) => {
+  const [startpickerInputId] = useState(`startpicker-input-${Math.floor(Math.random() * 10000)}`);
+  const [startpickerContainerId] = useState(`startpicker-container-${Math.floor(Math.random() * 10000)}`);
+  const [endpickerInputId] = useState(`endpicker-input-${Math.floor(Math.random() * 10000)}`);
+  const [endpickerContainerId] = useState(`endpicker-container-${Math.floor(Math.random() * 10000)}`);
+
   useEffect(() => {
     const defaultOptions: DateRangePickerOptions = {
       startpicker: {
         date: startpickerDate,
-        input: '#startpicker-input',
-        container: '#startpicker-container',
+        input: `#${startpickerInputId}`,
+        container: `#${startpickerContainerId}`,
       },
       endpicker: {
         date: endpickerDate,
-        input: '#endpicker-input',
-        container: '#endpicker-container',
+        input: `#${endpickerInputId}`,
+        container: `#${endpickerContainerId}`,
       },
       language: 'ko',
       usageStatistics: false,
@@ -71,28 +74,29 @@ const DateRangePickerComponent: React.FC<TuiDateRangePickerProps> = ({
       picker.destroy();
     };
   }, [endpickerDate, handleChange, options, startpickerDate]);
+
   return (
     <DateRangePickerCss.Container
       style={{ width: containerWidth, height: containerHeight }}
     >
       <input
         type="text"
-        id="startpicker-input"
+        id={startpickerInputId}
         placeholder="Start Date"
         style={{ width: inputWidth, fontSize }}
       />
       <div
-        id="startpicker-container"
+        id={startpickerContainerId}
         style={{ zIndex: 9999, backgroundColor }}
       />
       <DateRangePickerCss.Dash>~</DateRangePickerCss.Dash>
       <input
         type="text"
-        id="endpicker-input"
+        id={endpickerInputId}
         placeholder="End Date"
         style={{ width: inputWidth, fontSize }}
       />
-      <div id="endpicker-container" style={{ zIndex: 9999, backgroundColor }} />
+      <div id={endpickerContainerId} style={{ zIndex: 9999, backgroundColor }} />
     </DateRangePickerCss.Container>
   );
 };
