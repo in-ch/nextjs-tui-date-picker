@@ -31,17 +31,19 @@ const DateRangePickerComponent: React.FC<TuiDateRangePickerProps> = ({
   fontSize = 14,
   backgroundColor = '#fff',
   format = 'YYYY-MM-dd',
-  selectableRangeStart = new Date(),
-  selectableRangeEnd = new Date(
-    new Date().getFullYear() + 1,
-    new Date().getMonth(),
-    new Date().getDate()
-  ),
 }: TuiDateRangePickerProps) => {
-  const [startpickerInputId] = useState(`startpicker-input-${Math.floor(Math.random() * 10000)}`);
-  const [startpickerContainerId] = useState(`startpicker-container-${Math.floor(Math.random() * 10000)}`);
-  const [endpickerInputId] = useState(`endpicker-input-${Math.floor(Math.random() * 10000)}`);
-  const [endpickerContainerId] = useState(`endpicker-container-${Math.floor(Math.random() * 10000)}`);
+  const [startpickerInputId] = useState(
+    `startpicker-input-${Math.floor(Math.random() * 10000)}`
+  );
+  const [startpickerContainerId] = useState(
+    `startpicker-container-${Math.floor(Math.random() * 10000)}`
+  );
+  const [endpickerInputId] = useState(
+    `endpicker-input-${Math.floor(Math.random() * 10000)}`
+  );
+  const [endpickerContainerId] = useState(
+    `endpicker-container-${Math.floor(Math.random() * 10000)}`
+  );
 
   useEffect(() => {
     const defaultOptions: DateRangePickerOptions = {
@@ -57,17 +59,15 @@ const DateRangePickerComponent: React.FC<TuiDateRangePickerProps> = ({
       },
       language: 'ko',
       usageStatistics: false,
-      selectableRanges: [[selectableRangeStart, selectableRangeEnd]],
       format,
     };
     const mergedOptions = { ...defaultOptions, ...options };
     const picker = DatePicker.createRangePicker(mergedOptions);
 
     picker.on('change:end', () => {
-      handleChange([
-        (picker as any)._startpicker._date,
-        (picker as any)._endpicker._date,
-      ]);
+      const newStartDate = (picker as any)._startpicker._date;
+      const newEndDate = (picker as any)._endpicker._date;
+      handleChange([newStartDate, newEndDate]);
     });
 
     return () => {
@@ -96,7 +96,10 @@ const DateRangePickerComponent: React.FC<TuiDateRangePickerProps> = ({
         placeholder="End Date"
         style={{ width: inputWidth, fontSize }}
       />
-      <div id={endpickerContainerId} style={{ zIndex: 9999, backgroundColor }} />
+      <div
+        id={endpickerContainerId}
+        style={{ zIndex: 9999, backgroundColor }}
+      />
     </DateRangePickerCss.Container>
   );
 };
