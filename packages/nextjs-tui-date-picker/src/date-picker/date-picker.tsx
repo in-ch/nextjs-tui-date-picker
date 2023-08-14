@@ -27,8 +27,12 @@ const DatePickerComponent = ({
   format = 'yyyy-MM-dd',
 }: TuiDatePickerProps) => {
   const datePickerRef = useRef<DatePicker | null | HTMLDivElement>(null);
-  const [wrapperId] = useState(`datepicker-wrapper-${Math.floor(Math.random() * 10000)}`);
-  const [inputId] = useState(`datepicker-input-${Math.floor(Math.random() * 10000)}`);
+  const [wrapperId] = useState(
+    `datepicker-wrapper-${Math.floor(Math.random() * 10000)}`
+  );
+  const [inputId] = useState(
+    `datepicker-input-${Math.floor(Math.random() * 10000)}`
+  );
 
   useEffect(() => {
     const datePicker = new DatePicker(`#${wrapperId}`, {
@@ -52,7 +56,7 @@ const DatePickerComponent = ({
       handleChange(formattedDate);
     });
     datePickerRef.current = datePicker;
-  }, []);
+  }, [date]);
 
   return (
     <DateRangePickerCss.Container
