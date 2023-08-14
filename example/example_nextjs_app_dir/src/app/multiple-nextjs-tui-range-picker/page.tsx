@@ -1,8 +1,6 @@
 'use client';
 
-import {
-  TuiDateRangePicker,
-} from 'nextjs-tui-date-picker';
+import { TuiDateRangePicker } from 'nextjs-tui-date-picker';
 
 export default function Page() {
   const options = {
