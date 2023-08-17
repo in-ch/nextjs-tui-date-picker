@@ -1,28 +1,11 @@
 'use client';
 
-import { TuiDatePicker } from 'nextjs-tui-date-picker';
+import {
+  getFirstDayOfMonth,
+  getLastDayOfMonth,
+  TuiDatePicker,
+} from 'nextjs-tui-date-picker';
 import { useState } from 'react';
-
-function getFirstDayOfMonth(dateString: string) {
-  const date = new Date(dateString);
-  const year = date.getFullYear();
-  const month = date.getMonth();
-
-  return `${year}-${(month + 1).toString().padStart(2, '0')}-01`;
-}
-
-function getLastDayOfMonth(dateString: string) {
-  const date = new Date(dateString);
-  const year = date.getFullYear();
-  const month = date.getMonth();
-
-  const lastDay = new Date(year, month + 1, 0);
-  const lastDayOfMonth = lastDay.getDate();
-
-  return `${year}-${(month + 1).toString().padStart(2, '0')}-${lastDayOfMonth
-    .toString()
-    .padStart(2, '0')}`;
-}
 
 export default function Page() {
   const [firstDate, setFirstDate] = useState(new Date());
