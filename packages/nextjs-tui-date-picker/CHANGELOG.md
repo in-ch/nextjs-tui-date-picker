@@ -1,5 +1,11 @@
 # nextjs-tui-date-picker
 
+## 1.2.0
+
+### Minor Changes
+
+- add ad few helpful utils
+
 ## 1.1.3
 
 ### Patch Changes
