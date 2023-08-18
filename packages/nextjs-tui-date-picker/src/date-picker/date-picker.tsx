@@ -78,7 +78,6 @@ const DatePickerComponent = ({
           }
           style={{ width: inputWidth, fontSize }}
         />
-        <span className="tui-ico-date" />
       </div>
       <div
         id={wrapperId}
