@@ -25,7 +25,6 @@
     "react-dom": "^16.13.0"
   },
   "peerDependencies": {
-    "next": "*",
     "react": "*",
     "react-dom": "*"
   },
