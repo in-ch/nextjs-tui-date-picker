@@ -1,0 +1,64 @@
+{
+  "name": "nextjs-tui-date-range-picker",
+  "version": "1.0.0",
+  "description": "nextjs data range picker built with and for NextJs",
+  "main": "dist/nextjs-tui-date-range-picker.cjs.js",
+  "module": "dist/nextjs-tui-date-range-picker.esm.js",
+  "types": "dist/nextjs-tui-date-range-picker.cjs.d.ts",
+  "sideEffects": false,
+  "author": "in-ch",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/in-ch/nextjs-tui-date-picker.git"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.12.0",
+    "moment": "^2.29.4",
+    "next": "^13.4.5",
+    "tui-date-picker": "^4.3.3",
+    "@tui-inch/core": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/jest-in-case": "^1.0.6",
+    "jest-in-case": "^1.0.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "next",
+    "reactjs",
+    "nextjs",
+    "date-picker",
+    "date-range-picker",
+    "nextjs-tui-date-range-picker",
+    "nextjs-tui-date-range-picker",
+    "tui-date-picker",
+    "component",
+    "calendar"
+  ],
+  "preconstruct": {
+    "entrypoints": [
+      "index.ts"
+    ]
+  },
+  "exports": {
+    ".": {
+      "module": "./dist/nextjs-tui-date-range-picker.esm.js",
+      "import": "./dist/nextjs-tui-date-range-picker.cjs.mjs",
+      "default": "./dist/nextjs-tui-date-range-picker.cjs.js"
+    },
+    "./package.json": "./package.json"
+  }
+}
