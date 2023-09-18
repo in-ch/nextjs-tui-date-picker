@@ -11,12 +11,10 @@
   "repository": "https://github.com/in-ch/nextjs-tui-date-picker.git/tree/master/packages/nextjs-tui-date-picker",
   "dependencies": {
     "@babel/runtime": "^7.12.0",
-    "@emotion/cache": "^11.4.0",
-    "@emotion/react": "^11.8.1",
-    "@emotion/styled": "^11.8.1",
     "moment": "^2.29.4",
     "next": "^13.4.5",
-    "tui-date-picker": "^4.3.3"
+    "tui-date-picker": "^4.3.3",
+    "@tui-inch/core": "1.0.0"
   },
   "devDependencies": {
     "@types/jest-in-case": "^1.0.6",

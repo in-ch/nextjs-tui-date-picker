@@ -3,7 +3,7 @@ import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
 import DatePicker from 'tui-date-picker';
 import moment from 'moment';
 
-import * as DateRangePickerCss from '../style/date-picker.css';
+import * as DateRangePickerCss from '@tui-inch/core';
 
 export interface TuiDatePickerProps {
   handleChange: (e: any) => void;
