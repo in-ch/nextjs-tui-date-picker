@@ -13,6 +13,12 @@ export default function Home() {
       <Link href="/nextjs-tui-date-time-picker">
         <p>nextjs-tui-date-time-picker</p>
       </Link>
+      <Link href="/nextjs-tui-date-month-picker">
+        <p>nextjs-tui-date-month-picker</p>
+      </Link>
+      <Link href="/nextjs-tui-date-year-picker">
+        <p>nextjs-tui-date-year-picker</p>
+      </Link>
       <Link href="/multiple-nextjs-tui-date-picker">
         <p>multiple-nextjs-tui-date-picker</p>
       </Link>
