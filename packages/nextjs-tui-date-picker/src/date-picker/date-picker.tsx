@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
 import { Container } from '@tui-inch/core';
-import DatePicker from 'tui-date-picker';
+import DatePicker, { CalendarType } from 'tui-date-picker';
 import moment from 'moment';
 
 export interface TuiDatePickerProps {
@@ -14,6 +14,7 @@ export interface TuiDatePickerProps {
   backgroundColor?: string;
   format?: string;
   timePicker?: boolean;
+  dateType?: CalendarType;
 }
 
 const DatePickerComponent = ({
@@ -26,6 +27,7 @@ const DatePickerComponent = ({
   backgroundColor = '#fff',
   format = 'yyyy-MM-dd',
   timePicker = false,
+  dateType = 'date',
 }: TuiDatePickerProps) => {
   const datePickerRef = useRef<DatePicker | null | HTMLDivElement>(null);
   const [wrapperId] = useState(
@@ -43,6 +45,7 @@ const DatePickerComponent = ({
         format: format,
       },
       timePicker,
+      type: dateType,
     });
 
     // Each time the "change" event is triggered in the datePicker,
