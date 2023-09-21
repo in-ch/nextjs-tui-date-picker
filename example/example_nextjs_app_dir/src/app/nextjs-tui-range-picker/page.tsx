@@ -1,6 +1,6 @@
 'use client';
 
-import { TuiDateRangePicker } from 'nextjs-tui-date-picker';
+import { TuiDateRangePicker } from 'nextjs-tui-date-range-picker';
 import { useState } from 'react';
 
 export default function Page() {

@@ -1,9 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
+import { Container } from '@tui-inch/core';
 import DatePicker from 'tui-date-picker';
 import moment from 'moment';
-
-import * as DateRangePickerCss from '@tui-inch/core';
 
 export interface TuiDatePickerProps {
   handleChange: (e: any) => void;
@@ -14,6 +13,7 @@ export interface TuiDatePickerProps {
   fontSize?: number;
   backgroundColor?: string;
   format?: string;
+  timePicker?: boolean;
 }
 
 const DatePickerComponent = ({
@@ -25,6 +25,7 @@ const DatePickerComponent = ({
   fontSize = 18,
   backgroundColor = '#fff',
   format = 'yyyy-MM-dd',
+  timePicker = false,
 }: TuiDatePickerProps) => {
   const datePickerRef = useRef<DatePicker | null | HTMLDivElement>(null);
   const [wrapperId] = useState(
@@ -41,6 +42,7 @@ const DatePickerComponent = ({
         element: `#${inputId}`,
         format: format,
       },
+      timePicker,
     });
 
     // Each time the "change" event is triggered in the datePicker,
@@ -59,9 +61,7 @@ const DatePickerComponent = ({
   }, [date]);
 
   return (
-    <DateRangePickerCss.Container
-      style={{ width: containerWidth, height: containerHeight }}
-    >
+    <Container style={{ width: containerWidth, height: containerHeight }}>
       <div
         className="tui-datepicker-input tui-datetime-input tui-has-focus"
         style={{ width: inputWidth, backgroundColor }}
@@ -84,7 +84,7 @@ const DatePickerComponent = ({
         style={{ marginTop: '-1px' }}
         ref={datePickerRef as MutableRefObject<HTMLDivElement>}
       />
-    </DateRangePickerCss.Container>
+    </Container>
   );
 };
 
