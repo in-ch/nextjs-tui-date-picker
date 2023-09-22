@@ -1,6 +1,6 @@
 {
   "name": "tui-inch-core",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "core file of nextjs date picker & date range picker",
   "main": "dist/tui-inch-core.cjs.js",
   "module": "dist/tui-inch-core.esm.js",
