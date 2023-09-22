@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
-import { Container } from '@tui-inch/core';
+import { Container } from 'tui-inch-core';
 import DatePicker, { CalendarType } from 'tui-date-picker';
 import moment from 'moment';
 
