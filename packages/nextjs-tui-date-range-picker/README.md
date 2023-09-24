@@ -1,6 +1,6 @@
-# nextjs-tui-date-picker
+# nextjs-tui-date-range-picker
 
-`nextjs-tui-date-picker` allows you to pick a date using a pop-up calendar in `Next.js`.
+`nextjs-tui-date-range-picker` allows you to pick a date using a pop-up calendar in `Next.js`.
 
 ## Document
 
@@ -13,36 +13,42 @@
 
 ## Installation
 
-This library use `nextjs-tui-date-picker`, so you need to install it.
+This library use `nextjs-tui-date-range-picker`, so you need to install it.
 
 ```bash
-npm install --save nextjs-tui-date-picker
+npm install --save nextjs-tui-date-range-picker
 ```
 
 or
 
 ```bash
-yarn add nextjs-tui-date-picker
+yarn add nextjs-tui-date-range-picker
 ```
 
 ## How to use
 
 <br/>
 
-- TuiDatePicker
+- TuiDateRangePicker
 
 ```tsx
 'use client';
 
-import { TuiDatePicker } from 'nextjs-tui-date-picker';
+import {
+  TuiDateRangePicker,
+} from 'nextjs-tui-date-picker';
 
-<TuiDatePicker
+<TuiDateRangePicker
     handleChange={handleChange}
-    date={new Date('2023-01-01')}
-    inputWidth={140}
-    fontSize={16}
+    options={options}
+    inputWidth={80}
+    containerWidth={200}
+    startpickerDate={new Date('2023-01-02')}
+    endpickerDate={new Date('2023-01-30')}
 />
 ```
+
+
 - If you wanna change format or [language](#properties)
 
 ```tsx
@@ -63,19 +69,9 @@ return (
 
 ## Demos
 
-- nextjs-tui-date-picker.
+- nextjs-tui-range-picker.
 
-![nextjs-tui-date-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/ee7125ea-452c-4903-802a-36d1372a6c9c)
-
-![nextjs-date-inline-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/65c532b6-3678-4b0f-9053-04c3fb82045e)
-
-![nextjs-date-year-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/5010fb07-1627-4126-aff7-6148556acfdf)
-
-![nextjs-date-month-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/0cc7ac9b-040c-4b9f-9076-edc072882d3c)
-
-![nextjs-date-time-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/ffcdfc01-b718-46d0-851e-0f03ddbbc436)
-
-![nextjs-date-time-tab-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/74e9f423-f374-494c-ae39-3377c274694b)
+![nextjs-tui-range-picker](https://github.com/in-ch/nextjs-tui-date-picker/assets/49556566/fa488a25-4695-43f8-8eba-bd4599b42b0a)
 
 ## Properties
 
@@ -141,7 +137,7 @@ npm install
 
 ## Contribute
 
-You can follow below to contribute `nextjs-tui-date-picker`
+You can follow below to contribute `nextjs-tui-date-range-picker`
 
 Clone the repository.
 
