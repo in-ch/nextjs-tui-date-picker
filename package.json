@@ -81,8 +81,7 @@
     "release": "yarn build && node cssBundle.js && changeset publish"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "keywords": [
     "combobox",

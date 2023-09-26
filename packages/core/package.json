@@ -1,11 +1,15 @@
 {
   "name": "tui-inch-core",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "core file of nextjs date picker & date range picker",
   "main": "dist/tui-inch-core.cjs.js",
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
   "module": "dist/tui-inch-core.esm.js",
   "types": "dist/tui-inch-core.d.ts",
-  "sideEffects": false,
+  "style": "dist/date-picker.min.css",
   "author": "in-ch",
   "license": "MIT",
   "repository": "https://github.com/in-ch/nextjs-tui-date-picker.git/tree/master/packages/nextjs-tui-date-picker",
@@ -15,10 +19,11 @@
       "import": "./dist/tui-inch-core.cjs.mjs",
       "default": "./dist/tui-inch-core.cjs.js"
     },
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./dist/date-picker.min.css": "./dist/date-picker.min.css"
   },
   "files": [
-    "dist"
+    "dist/**"
   ],
   "keywords": [
     "react",
@@ -37,8 +42,12 @@
     "access": "public"
   },
   "preconstruct": {
-    "entrypoints": [
-      "index.ts"
-    ]
+    "packages": [
+      "packages/*",
+      "docs/generate-magical-types"
+    ],
+    "exports": {
+      "importConditionDefaultExport": "default"
+    }
   }
 }
