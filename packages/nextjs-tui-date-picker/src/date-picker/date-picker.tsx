@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
-import { Container } from 'tui-inch-core';
 import DatePicker, { CalendarType } from 'tui-date-picker';
 import moment from 'moment';
+import 'tui-inch-core/dist/date-picker.min.css';
 
 export interface TuiDatePickerProps {
   handleChange: (e: any) => void;
@@ -64,7 +64,10 @@ const DatePickerComponent = ({
   }, [date]);
 
   return (
-    <Container style={{ width: containerWidth, height: containerHeight }}>
+    <div
+      className="container"
+      style={{ width: containerWidth, height: containerHeight }}
+    >
       <div
         className="tui-datepicker-input tui-datetime-input tui-has-focus"
         style={{ width: inputWidth, backgroundColor }}
@@ -87,7 +90,7 @@ const DatePickerComponent = ({
         style={{ marginTop: '-1px' }}
         ref={datePickerRef as MutableRefObject<HTMLDivElement>}
       />
-    </Container>
+    </div>
   );
 };
 
