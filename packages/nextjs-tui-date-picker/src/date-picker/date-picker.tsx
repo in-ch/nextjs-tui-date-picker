@@ -2,7 +2,7 @@
 import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
 import DatePicker, { CalendarType } from 'tui-date-picker';
 import moment from 'moment';
-import 'tui-inch-core/dist/date-picker.min.css';
+import 'tui-inch-core/dist/date-picker.module.css';
 
 export interface TuiDatePickerProps {
   handleChange: (e: any) => void;

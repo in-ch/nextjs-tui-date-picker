@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-const sourcePath = 'packages/core/src/style/date-picker.css'; // 원본 CSS 파일 경로
-const destinationPath = 'packages/core/dist/date-picker.min.css'; // 목적지 CSS 파일 경로
+const sourcePath = 'packages/core/src/style/date-picker.module.css'; // 원본 CSS 파일 경로
+const destinationPath = 'packages/core/dist/date-picker.module.css'; // 목적지 CSS 파일 경로
 
 fs.readFile(sourcePath, 'utf8', (err, data) => {
   if (err) {

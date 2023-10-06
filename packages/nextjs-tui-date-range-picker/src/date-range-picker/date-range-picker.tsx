@@ -2,7 +2,7 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import DatePicker, { DateRangePickerOptions } from 'tui-date-picker';
-import 'tui-inch-core/dist/date-picker.min.css';
+import 'tui-inch-core/dist/date-picker.module.css';
 
 export type DateRangePickerOption = Partial<DateRangePickerOptions>;
 export interface TuiDateRangePickerProps {
