@@ -39,7 +39,7 @@ fs.readFile(packageJsonPath, 'utf8', (err, data) => {
       'default': './dist/tui-inch-core.cjs.js',
     },
     './package.json': './package.json',
-    './dist/date-picker.min.css': './dist/date-picker.min.css',
+    './dist/date-picker.module.css': './dist/date-picker.module.css',
   };
 
   // 업데이트된 package.json을 다시 문자열로 변환

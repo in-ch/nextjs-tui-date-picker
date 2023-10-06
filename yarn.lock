@@ -8874,11 +8874,6 @@ tui-date-picker@^4.3.3:
   dependencies:
     tui-time-picker "^2.1.6"
 
-"tui-inch-core@workspace:*":
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/tui-inch-core/-/tui-inch-core-1.1.6.tgz#5dff9a127a284a1350687a917a559e7f67a68f43"
-  integrity sha512-56Co8a/XJWZDvOtUA5Txh+GBvW1YcQHKMrgld+xqZFO0KyLxKn8alG0Acn1j1dLzlLcOaDU/4VZlsCWcGhYPyg==
-
 tui-time-picker@^2.1.6:
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/tui-time-picker/-/tui-time-picker-2.1.6.tgz#8dcca8b78f0a4da03a87ac1d438ae4518f0ecb54"
