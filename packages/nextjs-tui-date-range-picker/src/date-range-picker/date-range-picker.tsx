@@ -2,7 +2,7 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import DatePicker, { DateRangePickerOptions } from 'tui-date-picker';
-import 'tui-inch-core/dist/date-picker.module.css';
+import * as DatePickerCss from '../styles/date-picker.css';
 
 export type DateRangePickerOption = Partial<DateRangePickerOptions>;
 export interface TuiDateRangePickerProps {
@@ -76,8 +76,7 @@ const DateRangePickerComponent: React.FC<TuiDateRangePickerProps> = ({
   }, [endpickerDate, handleChange, options, startpickerDate]);
 
   return (
-    <div
-      className="container"
+    <DatePickerCss.Container
       style={{ width: containerWidth, height: containerHeight }}
     >
       <input
@@ -90,7 +89,7 @@ const DateRangePickerComponent: React.FC<TuiDateRangePickerProps> = ({
         id={startpickerContainerId}
         style={{ zIndex: 9999, backgroundColor }}
       />
-      <div className="dash">~</div>
+      <DatePickerCss.Dash>~</DatePickerCss.Dash>
       <input
         type="text"
         id={endpickerInputId}
@@ -101,7 +100,7 @@ const DateRangePickerComponent: React.FC<TuiDateRangePickerProps> = ({
         id={endpickerContainerId}
         style={{ zIndex: 9999, backgroundColor }}
       />
-    </div>
+    </DatePickerCss.Container>
   );
 };
 
