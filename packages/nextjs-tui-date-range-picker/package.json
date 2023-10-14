@@ -1,6 +1,6 @@
 {
   "name": "nextjs-tui-date-range-picker",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "nextjs data range picker built with and for NextJs",
   "main": "dist/nextjs-tui-date-range-picker.cjs.js",
   "module": "dist/nextjs-tui-date-range-picker.esm.js",
@@ -23,7 +23,7 @@
     "moment": "^2.29.4",
     "next": "^13.4.5",
     "tui-date-picker": "^4.3.3",
-    "tui-inch-core": "^1.1.10"
+    "tui-inch-core": "^2.0.0"
   },
   "devDependencies": {
     "@types/jest-in-case": "^1.0.6",
