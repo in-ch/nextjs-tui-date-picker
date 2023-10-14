@@ -19,8 +19,7 @@
       "import": "./dist/tui-inch-core.cjs.mjs",
       "default": "./dist/tui-inch-core.cjs.js"
     },
-    "./package.json": "./package.json",
-    "./dist/date-picker.module.css": "./dist/date-picker.module.css"
+    "./package.json": "./package.json"
   },
   "files": [
     "dist/**"
