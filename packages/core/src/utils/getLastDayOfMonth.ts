@@ -1,12 +1,17 @@
-export const getLastDayOfMonth = (dateString: string) => {
-  const date = new Date(dateString);
-  const year = date.getFullYear();
-  const month = date.getMonth();
+export const getLastDayOfMonth = (dateString: string, format: string) => {
+  const parts = dateString.split(/[-: ]/);
+  const formatParts = format.split(/[-: ]/);
 
-  const lastDay = new Date(year, month + 1, 0);
-  const lastDayOfMonth = lastDay.getDate();
+  let year, month, day;
+  for (let i = 0; i < formatParts.length; i++) {
+    if (formatParts[i].toLowerCase() === 'yyyy') {
+      year = parseInt(parts[i], 10);
+    } else if (formatParts[i].toLowerCase() === 'mm') {
+      month = parseInt(parts[i], 10) - 1; // JavaScript에서 월은 0부터 시작합니다 (0은 1월, 11은 12월).
+    } else if (formatParts[i].toLowerCase() === 'dd') {
+      day = parseInt(parts[i], 10);
+    }
+  }
 
-  return `${year}-${(month + 1).toString().padStart(2, '0')}-${lastDayOfMonth
-    .toString()
-    .padStart(2, '0')}`;
+  return new Date(year || 0, month || 0, day);
 };
