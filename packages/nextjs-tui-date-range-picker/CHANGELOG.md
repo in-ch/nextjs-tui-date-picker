@@ -15,7 +15,6 @@
 - Updated dependencies [a5b9525]
 - Updated dependencies [f47f2a2]
 - Updated dependencies [6a69392]
-  - tui-inch-core@2.0.0
 
 ## 1.1.0
 
@@ -26,4 +25,3 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @tui-inch/core@1.1.0

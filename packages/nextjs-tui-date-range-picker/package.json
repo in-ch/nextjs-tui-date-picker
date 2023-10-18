@@ -22,8 +22,7 @@
     "@emotion/styled": "^11.11.0",
     "moment": "^2.29.4",
     "next": "^13.4.5",
-    "tui-date-picker": "^4.3.3",
-    "tui-inch-core": "^2.0.0"
+    "tui-date-picker": "^4.3.3"
   },
   "devDependencies": {
     "@types/jest-in-case": "^1.0.6",
