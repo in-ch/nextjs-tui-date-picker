@@ -4,7 +4,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px;
   border-radius: 5px;
   position: relative;
   & > input {

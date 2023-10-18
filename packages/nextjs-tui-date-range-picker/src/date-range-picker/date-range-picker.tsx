@@ -18,6 +18,7 @@ export interface TuiDateRangePickerProps {
   fontSize?: number;
   backgroundColor?: string;
   format?: string;
+  padding?: number;
 }
 
 const DateRangePickerComponent: React.FC<TuiDateRangePickerProps> = ({
@@ -29,6 +30,7 @@ const DateRangePickerComponent: React.FC<TuiDateRangePickerProps> = ({
   containerWidth = 320,
   containerHeight = 42,
   fontSize = 14,
+  padding = 10,
   backgroundColor = '#fff',
   format = 'YYYY-MM-dd',
 }: TuiDateRangePickerProps) => {
@@ -77,7 +79,7 @@ const DateRangePickerComponent: React.FC<TuiDateRangePickerProps> = ({
 
   return (
     <DatePickerCss.Container
-      style={{ width: containerWidth, height: containerHeight }}
+      style={{ width: containerWidth, height: containerHeight, padding }}
     >
       <input
         type="text"
