@@ -1,5 +1,11 @@
 # nextjs-tui-date-picker
 
+## 2.1.0
+
+### Minor Changes
+
+- remove tui-inch-core & add padding property
+
 ## 2.0.0
 
 ### Major Changes
