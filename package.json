@@ -77,7 +77,7 @@
     "precommit": "yarn run type-check",
     "postinstall": "preconstruct dev && manypkg check",
     "version": "changeset && changeset version",
-    "release": "yarn build && node cssBundle.js && changeset publish"
+    "release": "yarn build && changeset publish"
   },
   "files": [
     "dist"
