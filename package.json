@@ -1,7 +1,7 @@
 {
   "name": "@nextjs-tui-date-picker/monorepo",
   "private": true,
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "A tui date picker control built with and for Next.js",
   "author": "in-ch",
   "license": "MIT",
