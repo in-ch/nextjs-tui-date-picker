@@ -1,5 +1,11 @@
 # nextjs-tui-date-picker
 
+## 2.2.0
+
+### Minor Changes
+
+- add props named `margin`
+
 ## 2.1.0
 
 ### Minor Changes
