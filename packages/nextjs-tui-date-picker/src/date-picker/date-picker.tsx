@@ -16,6 +16,7 @@ export interface TuiDatePickerProps {
   timePicker?: boolean;
   dateType?: CalendarType;
   padding?: number;
+  margin?: number;
 }
 
 const DatePickerComponent = ({
@@ -30,6 +31,7 @@ const DatePickerComponent = ({
   timePicker = false,
   dateType = 'date',
   padding = 10,
+  margin = 2,
 }: TuiDatePickerProps) => {
   const datePickerRef = useRef<DatePicker | null | HTMLDivElement>(null);
   const [wrapperId] = useState(
@@ -67,7 +69,12 @@ const DatePickerComponent = ({
 
   return (
     <DatePickerCss.Container
-      style={{ width: containerWidth, height: containerHeight, padding }}
+      style={{
+        width: containerWidth,
+        height: containerHeight,
+        padding,
+        margin,
+      }}
     >
       <div
         className="tui-datepicker-input tui-datetime-input tui-has-focus"
