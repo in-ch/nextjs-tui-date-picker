@@ -10,7 +10,7 @@
   ],
   "author": "in-ch",
   "license": "MIT",
-  "repository": "https://github.com/in-ch/nextjs-tui-date-picker.git/tree/master/packages/nextjs-tui-date-picker",
+  "repository": "https://github.com/in-ch/nextjs-tui-date-picker/tree/master/packages/nextjs-tui-date-picker",
   "dependencies": {
     "@babel/runtime": "^7.12.0",
     "@emotion/cache": "^11.11.0",
