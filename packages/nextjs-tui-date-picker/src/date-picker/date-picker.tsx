@@ -3,6 +3,7 @@ import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
 import DatePicker, { CalendarType } from 'tui-date-picker';
 import moment from 'moment';
 import * as DatePickerCss from '../styles/date-picker.css';
+import hexToRgb from '../helper/hexToRgb';
 
 export interface TuiDatePickerProps {
   handleChange: (e: any) => void;
@@ -90,7 +91,11 @@ const DatePickerComponent = ({
               String((e.target as EventTarget & HTMLInputElement).value)
             )
           }
-          style={{ width: inputWidth, fontSize }}
+          style={{
+            width: inputWidth,
+            fontSize,
+            backgroundColor: hexToRgb(backgroundColor),
+          }}
         />
       </div>
       <div

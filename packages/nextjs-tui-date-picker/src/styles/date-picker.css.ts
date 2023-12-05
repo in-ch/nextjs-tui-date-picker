@@ -27,7 +27,6 @@ const Container = styled.div`
 
   .tui-calendar {
     position: relative;
-    background-color: #fff;
     border: 1px solid #aaa;
     z-index: 10;
   }

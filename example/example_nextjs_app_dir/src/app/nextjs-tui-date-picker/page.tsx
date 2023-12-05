@@ -10,6 +10,7 @@ export default function Page() {
         date={new Date('2023-01-01')}
         inputWidth={140}
         fontSize={16}
+        backgroundColor="#ff0000"
       />
     </>
   );
