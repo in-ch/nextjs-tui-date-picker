@@ -1,5 +1,11 @@
 # nextjs-tui-date-picker
 
+## 2.2.1
+
+### Patch Changes
+
+- fix: backgroundColor not applied
+
 ## 2.2.0
 
 ### Minor Changes
