@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
+import React, { MutableRefObject, useLayoutEffect, useRef, useState } from 'react';
 import DatePicker, { CalendarType } from 'tui-date-picker';
 import moment from 'moment';
 import * as DatePickerCss from '../styles/date-picker.css';
@@ -42,7 +42,7 @@ const DatePickerComponent = ({
     `datepicker-input-${Math.floor(Math.random() * 10000)}`
   );
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const datePicker = new DatePicker(`#${wrapperId}`, {
       date,
       input: {
