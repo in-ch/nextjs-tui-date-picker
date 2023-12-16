@@ -1,5 +1,11 @@
 # nextjs-tui-date-picker
 
+## 2.2.2
+
+### Major Changes
+
+- useEffect -> useLayoutEffect
+
 ## 2.2.1
 
 ### Patch Changes
