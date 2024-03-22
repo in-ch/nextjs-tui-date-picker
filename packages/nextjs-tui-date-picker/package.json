@@ -1,6 +1,6 @@
 {
   "name": "nextjs-tui-date-picker",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "nextjs date picker built with and for NextJs",
   "main": "dist/nextjs-tui-date-picker.cjs.js",
   "module": "dist/nextjs-tui-date-picker.esm.js",

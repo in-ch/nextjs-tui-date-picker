@@ -1,5 +1,11 @@
 # nextjs-tui-date-range-picker
 
+## 2.1.1
+
+### Patch Changes
+
+- dependenies packages update
+
 ## 2.1.0
 
 ### Minor Changes
